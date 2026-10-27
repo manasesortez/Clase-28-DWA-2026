@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+  line-height: 1.6;
+  padding-bottom: 3rem;
+}
+
+header {
+  background: linear-gradient(135deg, #0a2a5e 0%, #1e5799 100%);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  opacity: 0.85;
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bloque {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bloque h2 {
+  color: #0a2a5e;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  border-left: 4px solid #f0b400;
+  padding-left: 0.6rem;
+}
+
+.tarjetas-botones {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.mini-tarjeta {
+  flex: 1 1 140px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  background: #fafbfc;
+}
+
+.mini-tarjeta h4 {
+  color: #0a2a5e;
+  margin-bottom: 0.6rem;
+}
+
+.mini-tarjeta button {
+  padding: 0.5rem 0.9rem;
+  background: #1e5799;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.mini-tarjeta button:hover {
+  background: #0a2a5e;
+}
+
+.salida {
+  padding: 0.6rem 0.9rem;
+  background: #f1f4f8;
+  border-left: 4px solid #f0b400;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  color: #333;
+}
+
+#campo-teclas {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#campo-teclas:focus {
+  outline: none;
+  border-color: #1e5799;
+  box-shadow: 0 0 0 3px rgba(30, 87, 153, 0.15);
+}
+
+.salida-teclas {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  background: #f1f4f8;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.salida-teclas p {
+  margin: 0.3rem 0;
+}
+
+.salida-teclas span {
+  font-weight: 700;
+  color: #1e5799;
+  font-family: 'Courier New', monospace;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+form input {
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #1e5799;
+  box-shadow: 0 0 0 3px rgba(30, 87, 153, 0.15);
+}
+
+form button {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: #1e5799;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #0a2a5e;
+}
+
+.mensaje-error,
+.mensaje-ok {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  min-height: 1.4rem;
+}
+
+.mensaje-error {
+  color: #d43b3b;
+}
+
+.mensaje-ok {
+  color: #2a9d4a;
+}
+
+#comentario {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+#comentario:focus {
+  outline: none;
+  border-color: #1e5799;
+  box-shadow: 0 0 0 3px rgba(30, 87, 153, 0.15);
+}
+
+.contador-linea {
+  text-align: right;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.contador-linea #contador {
+  font-weight: 700;
+}
+
+.tarjeta {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafbfc;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.15s;
+}
+
+.tarjeta h4 {
+  color: #0a2a5e;
+  margin-bottom: 0.25rem;
+}
+
+.tarjeta .detalle {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.92rem;
+}
+
+/* Clase que aplicamos vía JS en mouseover */
+.tarjeta.activa {
+  background: #e6f0ff;
+  border-color: #1e5799;
+  transform: translateY(-2px);
+}
+
+#buscar {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#buscar:focus {
+  outline: none;
+  border-color: #1e5799;
+  box-shadow: 0 0 0 3px rgba(30, 87, 153, 0.15);
+}
+
+/* focus/blur – resaltado */
+#buscar.resaltado {
+  border-color: #f0b400;
+  box-shadow: 0 0 0 3px rgba(240, 180, 0, 0.25);
+}
+
+#lista-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tarjeta-item {
+  padding: 0.6rem 0.9rem;
+  background: #f1f4f8;
+  border-radius: 6px;
+  font-weight: 500;
+  border-left: 4px solid #1e5799;
+}
+
+
+[hidden] {
+  display: none !important;
+}

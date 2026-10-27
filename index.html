@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos de un Objeto HTML – Clase 28</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Eventos de un Objeto HTML</h1>
+    <p>Más allá del clic – Clase 28</p>
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         EJEMPLO BASE (pág. 5): event.target
+         Un solo listener para varios botones
+         ============================================ -->
+    <section class="bloque">
+      <h2>Ejemplo base – event.target con varios botones</h2>
+
+      <div class="tarjetas-botones">
+        <div class="mini-tarjeta">
+          <h4>Tarjeta 1</h4>
+          <button>Comprar</button>
+        </div>
+        <div class="mini-tarjeta">
+          <h4>Tarjeta 2</h4>
+          <button>Comprar</button>
+        </div>
+        <div class="mini-tarjeta">
+          <h4>Tarjeta 3</h4>
+          <button>Comprar</button>
+        </div>
+      </div>
+
+      <p id="salida-botones" class="salida">Presiona un botón…</p>
+    </section>
+
+    <!-- ============================================
+         EJEMPLO BASE (pág. 7): event.key vs event.code
+         ============================================ -->
+    <section class="bloque">
+      <h2>Ejemplo base – event.key vs. event.code</h2>
+
+      <input
+        id="campo-teclas"
+        type="text"
+        placeholder="Escribe aquí y observa la salida..."
+      >
+
+      <div class="salida-teclas">
+        <p><strong>event.key:</strong> <span id="salida-key">–</span></p>
+        <p><strong>event.code:</strong> <span id="salida-code">–</span></p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         EJERCICIO 1: Formulario validado (submit)
+         ============================================ -->
+    <section class="bloque">
+      <h2>1. Formulario de reservación (validación con submit)</h2>
+
+      <form id="form-reserva" novalidate>
+        <label for="nombre-reservacion">Nombre:</label>
+        <input
+          id="nombre-reservacion"
+          type="text"
+          placeholder="Tu nombre completo"
+        >
+
+        <label for="num-personas">Número de personas:</label>
+        <input
+          id="num-personas"
+          type="number"
+          min="0"
+          placeholder="Ej. 2"
+        >
+
+        <button type="submit">Reservar</button>
+      </form>
+
+      <p id="mensaje-error" class="mensaje-error"></p>
+      <p id="mensaje-ok" class="mensaje-ok"></p>
+    </section>
+
+    <!-- ============================================
+         EJERCICIO 2: Contador de caracteres (input)
+         ============================================ -->
+    <section class="bloque">
+      <h2>2. Contador de caracteres en vivo (input)</h2>
+
+      <textarea
+        id="comentario"
+        maxlength="140"
+        placeholder="Escribe tu comentario (máx. 140 caracteres)..."
+      ></textarea>
+
+      <p class="contador-linea">
+        <span id="contador">0</span>/140
+      </p>
+    </section>
+
+    <!-- ============================================
+         EJERCICIO 3: Tarjeta con hover (mouseover/mouseout)
+         ============================================ -->
+    <section class="bloque">
+      <h2>3. Tarjeta con detalle al pasar el mouse</h2>
+
+      <div class="tarjeta" id="tarjeta-producto">
+        <h4>Producto A</h4>
+        <p class="detalle" hidden>
+          Detalle extendido del producto: características, precio y disponibilidad.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         RETO EXTRA: Buscador con filtro en vivo
+         ============================================ -->
+    <section class="bloque">
+      <h2>4. Reto extra – Buscador con filtro en vivo</h2>
+
+      <input
+        id="buscar"
+        type="search"
+        placeholder="Buscar producto... (Esc para limpiar)"
+      >
+
+      <div id="lista-tarjetas">
+        <div class="tarjeta-item">Laptop HP</div>
+        <div class="tarjeta-item">Mouse Logitech</div>
+        <div class="tarjeta-item">Teclado Mecánico</div>
+        <div class="tarjeta-item">Monitor Samsung</div>
+        <div class="tarjeta-item">Audífonos Sony</div>
+        <div class="tarjeta-item">Webcam Logitech</div>
+        <div class="tarjeta-item">Disco SSD Kingston</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/event-target.js"></script>
+  <script src="js/event-key.js"></script>
+  <script src="js/reserva.js"></script>
+  <script src="js/contador.js"></script>
+  <script src="js/tarjeta.js"></script>
+  <script src="js/buscador.js"></script>
+
+</body>
+</html>
